@@ -1,0 +1,15 @@
+# Pinuts File Encoding: UTF-8
+
+additional.attributes[] = favorite_color
+grp.std_personal.members[] = favorite_color
+
+favorite_color.title = Favorite Color
+favorite_color.values = red blue yellow green black white brown gray
+
+
+additional.attributes[] = cv
+grp.std_personal.members[] = cv
+
+cv.type = TEXT
+cv.isPrimary = true
+cv.title = Curriculum vitae
