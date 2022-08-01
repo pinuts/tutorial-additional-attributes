@@ -8,23 +8,17 @@ dependencies {
 
     // http://mavenrepo/#artifact~pinuts-releases/de.pinuts.cmsbs/CseConsole
     runtime('de.pinuts.cmsbs:CseConsole:7.32.3')
-
-    // http://mavenrepo/#artifact~pinuts-releases/de.pinuts.cmsbs/TestDriver2
-    runtime('de.pinuts.cmsbs:TestDriver2:2.0.14')
 }
 
 pinuts.projectName = 'MyProject'
 pinuts.groupId = 'de.pinuts'
 pinuts.um.port = System.getenv('MY_PROJECT_SERVER_PORT') ?: '8080'
-pinuts.version = getVersionFromPluginDescriptor('the_plugin/plugin.desc.json')
 
 startUm.dependsOn << umSchemaUpdate
 run.dependsOn << umSchemaUpdate
-test.dependsOn << testDriver_umci
 
 setup.doLast {
-    ln('cmsbs-conf/cse/plugins/de.pinuts.tutorial', pinuts.um.pluginsDir)
-    ln('cmsbs-conf/cse/plugins/de.pinuts.tutorial.test', pinuts.um.pluginsDir)
+    // ln('cmsbs-conf/cse/plugins/de.pinuts.myapp', pinuts.um.pluginsDir)
 
     fileTree('cmsbs-conf/conf.d').each {target ->
         ln(target, pinuts.um.confdDir)

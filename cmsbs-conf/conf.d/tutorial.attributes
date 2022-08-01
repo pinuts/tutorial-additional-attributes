@@ -13,3 +13,15 @@ grp.std_personal.members[] = cv
 cv.type = TEXT
 cv.isPrimary = true
 cv.title = Curriculum vitae
+
+
+additional.attributes[] = pets
+grp.std_personal.members[] = pets
+
+pets.type = TABLE
+pets.title = pets
+
+pets.members = name legs
+
+pets->name.type = STRING
+pets->legs.type = INTEGER
