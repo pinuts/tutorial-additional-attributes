@@ -1,3 +1,4 @@
+/// <reference path="../../UM/cmsbs-conf/cse/api/00_Entry.js" />
 /// <reference path="../../UM/cmsbs-conf/cse/api/00_basics.js" />
 /// <reference path="../../UM/cmsbs-conf/cse/api/00_polyfills.js" />
 /// <reference path="../../UM/cmsbs-conf/cse/api/01_digest.js" />
